@@ -1,0 +1,12 @@
+{
+    "chatml": {
+        "system_prefix": "<|im_start|>system",
+        "system_suffix": "<|im_end|>\n",
+        "human_prefix": "<|im_start|>user\n",
+        "human_suffix": "<|im_end|>\n",
+        "ai_prefix": "<|im_start|>assistant\n",
+        "ai_suffix": "<|im_end|>\n",
+        "wrapper": ["<|im_start|>user\n", "<|im_end|>\n"],
+        "stop": ["<|im_start|>", "<|im_end|>", "<|im_start|>user\n", "<|im_end|>\n<|im_start|>user\n"]
+    }
+}
