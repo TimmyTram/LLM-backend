@@ -26,12 +26,14 @@ async def handler(websocket, LLM):
         return
 
     try:
-        #llmResponse = LLM.generateOutputChunk(userInput, 'chat_1')
-        llmStream = LLM.generateOutputStream(userInput, 'chat_1')
-        llmResponse = ''
-        for out in llmStream:
-            print(bc.OKCYAN + out + bc.ENDC, sep=' ', end='', flush=True)
-            llmResponse += out
+        llmResponse = LLM.generateOutputChunk(userInput, 'chat_1')
+        
+        # Streaming output broken
+        #llmStream = LLM.generateOutputStream(userInput, 'chat_1')
+        # llmResponse = ''
+        # for out in llmStream:
+        #     print(bc.OKCYAN + out + bc.ENDC, sep=' ', end='', flush=True)
+        #     llmResponse += out
 
     except Exception as e:
         bc.color_print(bc.BOLD + bc.WARNING, f"Got Exception: {e}")
